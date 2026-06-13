@@ -1,0 +1,24 @@
+subjects = {
+    "Programming": 3,
+    "Database": 3,
+    "Networking": 3,
+    "Calculus": 4,
+    "English": 3,
+    "PE": 2
+}
+
+max_units = int(input("Maximum units allowed: "))
+
+selected = []
+total = 0
+
+for subject, units in subjects.items():
+    if total + units <= max_units:
+        selected.append(subject)
+        total += units
+
+print("\nRecommended Subjects:")
+for subject in selected:
+    print("-", subject)
+
+print("Total Units:", total)
